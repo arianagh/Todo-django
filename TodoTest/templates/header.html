@@ -1,0 +1,14 @@
+<ul>
+    <li><a href="{% url 'home'%}">Home</a></li>
+    <p></p>
+    <li><a href="{% url 'signup' %}">Signup</a><li>
+    <p></p>
+    {% if user.is_authenticated %}
+        "salam {{user.username}}"
+        <li style="margin-left: 10px"><a href="{% url 'logout'%}">logout</a></li>
+        <li style="margin-left: 15px"><a href="{% url 'view_profile' %}">profile</a></li>
+    {% else %}
+        <li><a href="{% url 'login'%}">Login</a></li>     <!-- be kesi neshun bede ke login nakarde -->
+             <!-- be kesi neshun bede ke login nakarde -->
+    {% endif %}
+</ul>

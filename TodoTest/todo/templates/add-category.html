@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <br>
+<ul>
+    <form action="{% url 'add-category' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+{#        <h3> title : {{ form.title }} </h3>#}
+{#        <h3> title : {{ form.user }} </h3>#}
+        <input type="submit" value="save">
+    </form>
+</ul>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock title %}
+</head>
+<body>
+        <header>   <!-- class ya id ro midim ta btonim to css sedash knim -->
+            {% include "header.html" %}
+        </header>
+        <div>
+        {% block content %}
+
+        {% endblock content %}
+        </div>
+
+
+</body>
+</html>

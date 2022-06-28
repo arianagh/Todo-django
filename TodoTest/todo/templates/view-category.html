@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+        {% for category in categories %}
+            <li>
+            {{ category.title }}
+            </li>
+            <form action="{% url 'edit-category' category.id %}">
+                <input type="submit" value="edit" />
+            </form>
+        {% endfor %}
+</ul>
+{% endblock content %}
